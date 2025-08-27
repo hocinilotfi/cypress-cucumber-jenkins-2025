@@ -22,4 +22,12 @@ pipeline{
             }
         }
     }
+    post{
+        always{
+            sh 'chmod +x tools/generate_html_cucumber_report.sh'
+            sh './tools/generate_html_cucumber_report.sh'
+            archiveArtifacts 'rapports/*.*'
+            
+        }
+    }
 }
