@@ -1,11 +1,16 @@
 pipeline{
     agent{
         docker{
-            image 'cypress/included:3.2.0'
-            args 'entrypoint='     
+            image 'cypress/browser:latest'
+            args 'entrypoint=' 
         }
     }
     stages{
+        stage('Node Version') {
+            steps {
+                 sh 'node --version'
+            }
+        }
         stage("installation"){
             steps{
                 sh 'npm ci'
