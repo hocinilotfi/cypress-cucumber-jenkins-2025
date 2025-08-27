@@ -21,8 +21,8 @@ pipeline{
         always{
           
             // cucumber 'cypress/cucumber-json/*.json'
-            sh 'tools/generate_html_cucumber_report.sh'
-            archiveArtifacts 'cypress/screenshots/**, rapports/**'
+            // sh 'tools/generate_html_cucumber_report.sh'
+            // archiveArtifacts 'cypress/screenshots/**, rapports/**'
         }
     }
 }
