@@ -23,6 +23,7 @@ pipeline{
             // cucumber 'cypress/cucumber-json/*.json'
             // sh 'tools/generate_html_cucumber_report.sh'
             // archiveArtifacts 'cypress/screenshots/**, rapports/**'
+            echo "Tests execution completed"
         }
     }
 }
