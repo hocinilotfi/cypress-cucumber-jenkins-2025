@@ -27,7 +27,7 @@ pipeline{
             sh 'chmod +x tools/generate_html_cucumber_report.sh'
             sh './tools/generate_html_cucumber_report.sh'
             archiveArtifacts 'rapports/**/*.*'
-            cucumber 'rapports/cucumber-json/*.json'
+            cucumber "cypress/cucumber-json/*.json"
             
         }
     }
